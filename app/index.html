@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app='blocChat'>
+
+    <head lang='en'>
+        <meta charset='UTF-8'>
+        <title>Bloc Chat</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel="stylesheet" href="/styles/style.css">
+    </head>
+
+    <body>
+
+        <!-- Modular User Interface -->
+        <ui-view></ui-view>
+
+        <!-- Angular Min. Library  -->
+        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js'></script>
+
+        <!-- Angular UI Router -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js'></script>
+
+        <!-- AngularFire -->
+        <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+
+        <!-- Initialize Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+        <script>
+        var config = {
+            apiKey: "AIzaSyDnrQU3MleCQLnMCHtBmJgvuTfZkf_AeJo",
+            authDomain: "bloc-chat-af07a.firebaseapp.com",
+            databaseURL: "https://bloc-chat-af07a.firebaseio.com",
+            projectId: "bloc-chat-af07a",
+            storageBucket: "",
+            messagingSenderId: "1068088437332"
+        };
+        firebase.initializeApp(config);
+        </script>
+        <!-- <script>
+        var config = {
+            apiKey: "AIzaSyD6KsHaYX-4P7npc3ZodVwynp-y42F8CDs",
+            authDomain: "chat-rooms-c0a22.firebaseapp.com",
+            databaseURL: "https://chat-rooms-c0a22.firebaseio.com",
+            projectId: "chat-rooms-c0a22",
+            storageBucket: "chat-rooms-c0a22.appspot.com",
+            messagingSenderId: "1039875363603"
+        };
+        firebase.initializeApp(config);
+        </script> -->
+
+        <!-- Custom Scripts-->
+        <script src='/scripts/app.js'></script>
+        <script src='/scripts/controllers/HomeCtrl.js'></script>
+        <script src='/scripts/services/Room.js'></script>
+
+    </body>
+
+</html>

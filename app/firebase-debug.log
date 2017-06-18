@@ -1,0 +1,64 @@
+[debug] [2017-06-18T20:42:56.137Z] ----------------------------------------------------------------------
+[debug] [2017-06-18T20:42:56.141Z] Command:      /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2017-06-18T20:42:56.142Z] CLI Version:  3.9.1
+[debug] [2017-06-18T20:42:56.142Z] Platform:     darwin
+[debug] [2017-06-18T20:42:56.142Z] Node Version: v6.10.3
+[debug] [2017-06-18T20:42:56.143Z] Time:         Sun Jun 18 2017 13:42:56 GMT-0700 (PDT)
+[debug] [2017-06-18T20:42:56.143Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-06-18T20:42:56.173Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-06-18T20:42:56.173Z] > authorizing via signed-in user
+[debug] [2017-06-18T20:42:56.177Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-06-18T20:42:56.178Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/F-yaC6_TqwbwwmlrX5ld0-eT64ZJt5LP3QOpMB0NUmA',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sun Jun 18 2017 13:42:56 GMT-0700 (PDT)
+[debug] [2017-06-18T20:42:57.001Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-18T20:42:57.006Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/bloc-chat-af07a  
+ Sun Jun 18 2017 13:42:57 GMT-0700 (PDT)
+[debug] [2017-06-18T20:42:57.972Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-18T20:42:57.973Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/bloc-chat-af07a/tokens  
+ Sun Jun 18 2017 13:42:57 GMT-0700 (PDT)
+[debug] [2017-06-18T20:42:58.892Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/yumikimnguyen/bloc-bootcamp/angular-applications/bloc-chat-rooms/app'...
+[info] 
+[debug] [2017-06-18T20:42:58.897Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/bloc-chat-af07a  
+ Sun Jun 18 2017 13:42:58 GMT-0700 (PDT)
+[debug] [2017-06-18T20:42:59.914Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-18T20:42:59.915Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1068088437332/clients/_:getWebAppConfig  
+ Sun Jun 18 2017 13:42:59 GMT-0700 (PDT)
+[debug] [2017-06-18T20:43:01.862Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-18T20:43:01.940Z] TypeError: Cannot read property 'public' of undefined
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2017-06-18T20:43:09.803Z] ----------------------------------------------------------------------
+[debug] [2017-06-18T20:43:09.808Z] Command:      /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2017-06-18T20:43:09.809Z] CLI Version:  3.9.1
+[debug] [2017-06-18T20:43:09.809Z] Platform:     darwin
+[debug] [2017-06-18T20:43:09.809Z] Node Version: v6.10.3
+[debug] [2017-06-18T20:43:09.810Z] Time:         Sun Jun 18 2017 13:43:09 GMT-0700 (PDT)
+[debug] [2017-06-18T20:43:09.810Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-06-18T20:43:09.832Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-06-18T20:43:09.832Z] > authorizing via signed-in user
+[debug] [2017-06-18T20:43:09.838Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/bloc-chat-af07a  
+ Sun Jun 18 2017 13:43:09 GMT-0700 (PDT)
+[debug] [2017-06-18T20:43:12.016Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-18T20:43:12.019Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/bloc-chat-af07a/tokens  
+ Sun Jun 18 2017 13:43:12 GMT-0700 (PDT)
+[debug] [2017-06-18T20:43:14.708Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/yumikimnguyen/bloc-bootcamp/angular-applications/bloc-chat-rooms/app'...
+[info] 
+[debug] [2017-06-18T20:43:14.712Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/bloc-chat-af07a  
+ Sun Jun 18 2017 13:43:14 GMT-0700 (PDT)
+[debug] [2017-06-18T20:43:15.293Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-18T20:43:15.294Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1068088437332/clients/_:getWebAppConfig  
+ Sun Jun 18 2017 13:43:15 GMT-0700 (PDT)
+[debug] [2017-06-18T20:43:16.301Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-18T20:43:16.335Z] TypeError: Cannot read property 'public' of undefined
+[error] 
+[error] Error: An unexpected error has occurred.
