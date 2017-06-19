@@ -1,18 +1,21 @@
 /*global angular*/
 /*global firebase*/
 
-var ref,
-    rooms;
-
 (function () {
     'use strict';
 
     function Room($firebaseArray) {
 
-        Room = {};
-        ref = firebase.database().ref().child('rooms');
-        rooms = $firebaseArray(ref);
+        var Room = {};
+        var ref = firebase.database().ref().child('rooms');
+        var rooms = $firebaseArray(ref);
+
         Room.all = rooms;
+
+        // Use, but isolate, $add method from AngularFire.
+        Room.add = function (room) {
+            rooms.$add(room);
+        };
 
         return Room;
     }

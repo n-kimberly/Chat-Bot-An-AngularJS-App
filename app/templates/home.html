@@ -1,6 +1,11 @@
-<h1><center> Home </center></h1>
-<nav>
-    <ul ng-repeat='room in home.rooms'>
-        <li> {{ room.$value }}</li>
-    </ul>
-</nav>
+
+<div class = 'nav'>
+    <br /><br />
+    <span class = 'new-room-button' type = 'button' ng-click = 'home.addRoom()'> New Room </span><br />
+    <div ng-repeat = 'room in home.rooms'>
+        <h3> {{ room.$value }} </h3>
+    </div>
+    <div ng-repeat = 'room in home.rooms'>
+        <h3> {{ room.name }} </h3>
+    </div>
+</div>
