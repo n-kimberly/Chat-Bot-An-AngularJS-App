@@ -2,23 +2,33 @@
 
 (function () {
     'use strict';
-    function HomeCtrl(Room, $uibModal) {
-        this.rooms = Room.all;
-        
-        this.addRoom = function () {
-            // Service to open modal windows
+
+    // Inject Message factory
+    function HomeCtrl(Room, Message, $uibModal) {
+        var home = this;
+        home.rooms = Room.all;
+
+        // Initialize active room
+        home.activeRoom = null;
+
+        // FUnction to add new room
+        home.addRoom = function () {
             $uibModal.open({
-                // Modal's content
                 templateUrl: '/templates/modal.html',
-                // Modal's window class
                 size: 'sm',
-                // Controller for modalInstance
                 controller: 'ModalCtrl as modal'
             });
         };
+
+        // FUnction to switch to and display messages of new active room
+        home.setActiveRoom = function (room) {
+            home.activeRoom = room;
+            home.messages = Message.getByRoomId(home.activeRoom.$id);
+            console.log(home.messages);
+        }
     }
 
     angular
         .module('blocChat')
-        .controller('HomeCtrl', ['Room', '$uibModal', HomeCtrl]);
+        .controller('HomeCtrl', ['Room', 'Message', '$uibModal', HomeCtrl]);
 }());

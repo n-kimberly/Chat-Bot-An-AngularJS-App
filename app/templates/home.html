@@ -1,11 +1,27 @@
 
 <div class = 'nav'>
     <br /><br />
-    <span class = 'new-room-button' type = 'button' ng-click = 'home.addRoom()'> New Room </span><br />
-    <div ng-repeat = 'room in home.rooms'>
-        <h3> {{ room.$value }} </h3>
+    <span class = 'new-room-button'
+          type = 'button'
+          ng-click = 'home.addRoom()'>
+          Create Room
+    </span>
+    <br />
+    <div class = 'room-names'
+        ng-repeat = 'room in home.rooms'>
+        <h3 class = 'room-name'
+            ng-click = 'home.setActiveRoom(room)'>
+            {{ room.name }}
+        </h3>
     </div>
-    <div ng-repeat = 'room in home.rooms'>
-        <h3> {{ room.name }} </h3>
+</div>
+
+<div class = 'chat'>
+    <h1> {{ home.activeRoom.name }} </h1>
+    <br /><br />
+    <div class = 'messages' ng-repeat = 'message in home.messages'>
+        On {{ message.sentAt }},
+        <font color='gray'> {{ message.username }} </font> said:
+        <div class = 'message-content'> {{ message.content }} </div>
     </div>
 </div>
