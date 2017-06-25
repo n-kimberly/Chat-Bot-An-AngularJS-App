@@ -1,14 +1,18 @@
 /*global angular*/
 /*global firebase*/
 
+var Room,
+    ref,
+    rooms;
+
 (function () {
     'use strict';
 
     function Room($firebaseArray) {
 
-        var Room = {};
-        var ref = firebase.database().ref().child('rooms');
-        var rooms = $firebaseArray(ref);
+        Room = {};
+        ref = firebase.database().ref().child('rooms');
+        rooms = $firebaseArray(ref);
 
         Room.all = rooms;
 

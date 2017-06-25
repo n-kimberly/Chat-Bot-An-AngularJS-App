@@ -16,7 +16,7 @@
             });
     }
     angular
-        // Inject bootstrap module
-        .module('blocChat', ['ui.router', 'firebase', 'ui.bootstrap'])
+        // Inject cookies module into dependency array
+        .module('blocChat', ['ui.router', 'firebase', 'ui.bootstrap', 'ngCookies'])
         .config(config);
 }());

@@ -1,0 +1,24 @@
+<!-- ui.bootstrap.modal markup -->
+
+<div class = 'modal-window'>
+    <div class = 'modal-header'>
+        <h4 class = 'modal-title' id = 'modal-title'> Login to Bloc Chat</h4>
+    </div>
+
+    <div class = 'modal-body'>
+        <h6 class = 'modal-prompt' id = 'modal-prompt'> Enter a username: </h6>
+        <input type = 'text'
+                name = 'input'
+                ng-model = 'modal.username'
+                required>
+    </div>
+
+    <div class = 'modal-actions'>
+        <button class = 'submit'
+                type = 'button'
+                ng-click = 'modal.submitUsername()'
+                ng-disabled = 'modal.username == null'>
+                Submit
+        </button>
+    </div>
+</section>

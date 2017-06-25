@@ -1,14 +1,18 @@
 /*global angular*/
 /*global firebase*/
 
+var Message,
+    ref,
+    messages;
+
 (function () {
     'use strict';
 
     function Message($firebaseArray) {
 
-        var Message = {};
-        var ref = firebase.database().ref().child('messages');
-        var messages = $firebaseArray(ref);
+        Message = {};
+        ref = firebase.database().ref().child('messages');
+        messages = $firebaseArray(ref);
 
         // Query firebase
         Message.getByRoomId = function (roomId) {

@@ -14,7 +14,7 @@
         // FUnction to add new room
         home.addRoom = function () {
             $uibModal.open({
-                templateUrl: '/templates/modal.html',
+                templateUrl: '/templates/room.html',
                 size: 'sm',
                 controller: 'ModalCtrl as modal'
             });
@@ -24,7 +24,6 @@
         home.setActiveRoom = function (room) {
             home.activeRoom = room;
             home.messages = Message.getByRoomId(home.activeRoom.$id);
-            console.log(home.messages);
         }
     }
 
