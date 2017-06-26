@@ -14,10 +14,14 @@ var Message,
         ref = firebase.database().ref().child('messages');
         messages = $firebaseArray(ref);
 
-        // Query firebase
+        Message.all = messages;
+
         Message.getByRoomId = function (roomId) {
-            // Return messages that match active roomId
             return $firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
+        };
+
+        Message.send = function (newMessage) {
+            messages.$add(newMessage);
         };
 
         return Message;

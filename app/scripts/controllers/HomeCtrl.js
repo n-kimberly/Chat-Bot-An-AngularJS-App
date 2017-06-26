@@ -1,17 +1,20 @@
 /*global angular*/
 
+var home;
+
 (function () {
     'use strict';
 
-    // Inject Message factory
-    function HomeCtrl(Room, Message, $uibModal) {
-        var home = this;
-        home.rooms = Room.all;
+    // Inject cookies object to retrieve associated username
+    function HomeCtrl(Room, Message, $uibModal, $cookies) {
+        home = this;
 
-        // Initialize active room
+        home.rooms = Room.all;
         home.activeRoom = null;
 
-        // FUnction to add new room
+        // Retrieve associated username
+        home.currentUser = $cookies.get('blocChatCurrentUser');
+
         home.addRoom = function () {
             $uibModal.open({
                 templateUrl: '/templates/room.html',
@@ -20,14 +23,20 @@
             });
         };
 
-        // FUnction to switch to and display messages of new active room
         home.setActiveRoom = function (room) {
             home.activeRoom = room;
             home.messages = Message.getByRoomId(home.activeRoom.$id);
+        }
+
+        home.sendMessage = function () {
+            home.newMessage.roomId = home.activeRoom.$id;
+            home.newMessage.username = home.currentUser;
+            home.newMessage.sentAt = firebase.database.ServerValue.TIMESTAMP;
+            Message.send(home.newMessage);
         }
     }
 
     angular
         .module('blocChat')
-        .controller('HomeCtrl', ['Room', 'Message', '$uibModal', HomeCtrl]);
+        .controller('HomeCtrl', ['Room', 'Message', '$uibModal', '$cookies', HomeCtrl]);
 }());

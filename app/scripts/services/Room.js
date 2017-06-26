@@ -16,7 +16,6 @@ var Room,
 
         Room.all = rooms;
 
-        // Use, but isolate, $add method from AngularFire.
         Room.add = function (room) {
             rooms.$add(room);
         };

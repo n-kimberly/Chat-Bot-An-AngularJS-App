@@ -67,10 +67,12 @@ body {
     position: absolute;
     top: 150px;
     left: 300px;
+    height: 500px;
+    /*width: 60%;*/
     color: rgba(0, 50, 150, 1);
 }
 
-.messages {
+.message-display {
     font-family: 'Pangolin', cursive;
     color: rgba(0, 50, 150, 1);
     font-size: 16px;
@@ -108,4 +110,13 @@ body {
     position: relative;
     bottom: 5px;
     padding: 15px;
+}
+
+.message-field {
+    position: fixed;
+    top: 700px;
+}
+
+.message-box {
+    width: 200px;
 }

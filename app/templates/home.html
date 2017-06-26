@@ -19,10 +19,31 @@
 <div class = 'chat'>
     <h1> {{ home.activeRoom.name }} </h1>
     <br /><br />
-    <div class = 'messages' ng-repeat = 'message in home.messages'>
-        On {{ message.sentAt }},
-        <font color='gray'> {{ message.username }} </font> said:
-        <div class = 'message-content'> {{ message.content }} </div>
+    <div class = 'message-display'
+        ng-repeat = 'message in home.messages'>
+            On {{ message.sentAt | date : "medium"  }},
+        <font color='gray'>
+                {{ message.username }}
+        </font> said:
+        <div class = 'message-content'>
+                {{ message.content }}
+        </div>
         <br /><br />
     </div>
+
+
+    <div class = 'message-field'
+            ng-show = 'home.activeRoom != null'>
+        <input type = 'text'
+                name = 'input'
+                placeholder = 'Type a message here'
+                class = 'message-box'
+                ng-model = 'home.newMessage.content'>
+        <button class = 'send-message'
+                type = 'button'
+                ng-click = 'home.sendMessage()'>
+                Send
+        </button>
+    </div>
+
 </div>
