@@ -113,8 +113,8 @@ body {
 }
 
 .message-field {
-    position: fixed;
-    top: 700px;
+    position: relative;
+    height: 50%;
 }
 
 .message-box {

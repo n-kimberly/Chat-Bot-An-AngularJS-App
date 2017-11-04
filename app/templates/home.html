@@ -4,7 +4,7 @@
     <span class = 'new-room-button'
           type = 'button'
           ng-click = 'home.addRoom()'>
-          Create Room
+          Create New Room
     </span>
     <br />
     <div class = 'room-names'
@@ -41,7 +41,7 @@
                 ng-model = 'home.newMessage.content'>
         <button class = 'send-message'
                 type = 'button'
-                ng-click = 'home.sendMessage()'>
+                ng-click = 'home.sendMessage(); home.respond()'>
                 Send
         </button>
     </div>
