@@ -1,70 +1,74 @@
 <!DOCTYPE html>
 <html ng-app='blocChat'>
 
-    <head lang='en'>
-        <meta charset='UTF-8'>
-        <title>The Un-Clever Bots</title>
-        <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <head lang='en'>
+    <meta charset='UTF-8'>
 
-        <!-- Fonts -->
-        <link rel = 'stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Bubbler+One|Open+Sans|Pangolin|Slabo+27px'>
+    <title>Unclever Bots</title>
 
-        <!-- Style for index.html -->
-        <link rel='stylesheet' href='/styles/main.css'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
 
-        <!-- Small Modal Window CSS -->
-        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
-    </head>
+    <!-- Fonts -->
+    <link rel = 'stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Averia+Gruesa+Libre'>
 
-    <body>
+    <!-- Style for index.html -->
+    <link rel='stylesheet' href='/styles/main.css'>
 
-        <div class = 'title'>
-            Unclever Bots
-        </div>
+    <!-- Small Modal Window CSS -->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+  </head>
 
-        <!-- Modular User Interface -->
-        <ui-view></ui-view>
+  <body>
 
-        <!-- Angular Min. Library  -->
-        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js'></script>
+    <div class = 'title'>
+        Unclever Bots
+    </div>
 
-        <!-- Angular UI Router -->
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js'></script>
+    <!-- Modular User Interface -->
+    <ui-view></ui-view>
 
-        <!-- AngularUI Bootstrap -->
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js'></script>
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
 
-        <!-- AngularFire -->
-        <script src='https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js'></script>
+    <!-- Angular Min. Library  -->
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js'></script>
 
-        <!-- Angular Cookies Module -->
-        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-cookies.js'></script>
+    <!-- Angular UI Router -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js'></script>
 
-        <!-- Initialize Firebase -->
-        <script src='https://www.gstatic.com/firebasejs/4.1.2/firebase.js'></script>
-        <script>
-        var config = {
-            apiKey: 'AIzaSyDnrQU3MleCQLnMCHtBmJgvuTfZkf_AeJo',
-            authDomain: 'bloc-chat-af07a.firebaseapp.com',
-            databaseURL: 'https://bloc-chat-af07a.firebaseio.com',
-            projectId: 'bloc-chat-af07a',
-            storageBucket: '',
-            messagingSenderId: '1068088437332'
-        };
-        firebase.initializeApp(config);
-        </script>
+    <!-- AngularUI Bootstrap -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js'></script>
 
-        <!-- LOAD FAKER -->
-        <script src="/scripts/faker.js"></script>
+    <!-- AngularFire -->
+    <script src='https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js'></script>
 
-        <!-- Application Files -->
-        <script src='/scripts/app.js'></script>
-        <script src='/scripts/controllers/HomeCtrl.js'></script>
-        <script src='/scripts/services/Room.js'></script>
-        <script src='/scripts/controllers/ModalCtrl.js'></script>
-        <script src='/scripts/services/Message.js'></script>
-        <script src='/scripts/services/BlocChatCookies.js'></script>
+    <!-- Angular Cookies Module -->
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-cookies.js'></script>
 
-    </body>
+    <!-- Initialize Firebase -->
+    <script src='https://www.gstatic.com/firebasejs/4.1.2/firebase.js'></script>
+    <script>
+    var config = {
+        apiKey: 'AIzaSyDnrQU3MleCQLnMCHtBmJgvuTfZkf_AeJo',
+        authDomain: 'bloc-chat-af07a.firebaseapp.com',
+        databaseURL: 'https://bloc-chat-af07a.firebaseio.com',
+        projectId: 'bloc-chat-af07a',
+        storageBucket: '',
+        messagingSenderId: '1068088437332'
+    };
+    firebase.initializeApp(config);
+    </script>
+
+    <!-- LOAD FAKER -->
+    <script src="/scripts/faker.js"></script>
+
+    <!-- Application Files -->
+    <script src='/scripts/app.js'></script>
+    <script src='/scripts/controllers/HomeCtrl.js'></script>
+    <script src='/scripts/services/Room.js'></script>
+    <script src='/scripts/controllers/ModalCtrl.js'></script>
+    <script src='/scripts/services/Message.js'></script>
+    <script src='/scripts/services/BlocChatCookies.js'></script>
+
+  </body>
 
 </html>

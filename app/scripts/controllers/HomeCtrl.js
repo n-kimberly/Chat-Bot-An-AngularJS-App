@@ -35,15 +35,26 @@ var home;
             Message.send(home.newMessage);
         };
 
+        // home.thinking = function (milliseconds) {
+        //   var start = new Date().getTime();
+        //   alert("works!");
+        //   for (var i = 0; i < 1e7; i++) {
+        //     if ((new Date().getTime() - start) > milliseconds) {
+        //       break;
+        //     };
+        //   };
+        // };
+
         home.respond = function () {
           // Bot auto response
             home.newMessage.roomId = home.activeRoom.$id;
-            home.newMessage.username = "The Un-Clever Bot";
+            home.newMessage.username = home.activeRoom.name;
             home.newMessage.sentAt = firebase.database.ServerValue.TIMESTAMP;
-            home.newMessage.content = faker.company.bs() // Faker data here?
+            home.newMessage.content = faker.hacker.phrase() // Faker data here?
             Message.send(home.newMessage);
             home.newMessage.content = null;
         };
+
     }
 
     angular

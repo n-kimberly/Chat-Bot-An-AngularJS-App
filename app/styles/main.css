@@ -1,122 +1,154 @@
-/*font-family: 'Pangolin', cursive;
-font-family: 'Slabo 27px', serif;
-font-family: 'Bubbler One', sans-serif;
-font-family: 'Open Sans', sans-serif;*/
-
-html{
-    height: 100%;
-    position: relative;
+body {
+  padding-left: 10rem;
+  padding-right: 10rem;
 }
 
-body {
-    height: 100%;
+div, button, span, strong {
+  font-family: 'Averia Gruesa Libre', cursive;
 }
 
 .title {
-    font-family: 'Pangolin', cursive;
-    font-size: 56px;
-    text-align: center;
-    color: rgba(0, 50, 150, 1);
-    background-color: rgba(0, 100, 200, 0.15);
-    /*padding: 1%;*/
-    padding: 1.5rem;
+  color: rgba(0, 50, 150, 1);
+  background-color: rgba(0, 100, 200, 0.15);
+  padding: 1rem;
+
+  font-size: 4.5rem;
+  text-align: center;
 }
 
 .nav {
-    font-family: 'Bubbler One', sans-serif;
-    text-align: center;
-    background-color: rgba(118, 118, 219, 0.05);
-    margin-left: 0.5rem;
-    position: relative;
-    width: 200px;
-    height: 90%;
+  position: relative;
+  padding-top: 1.5rem;
+  padding-left: 5rem;
+  background-color: rgba(0, 100, 200, 0.05);
+  height: 6rem;
+  width: 100%;
+  overflow-x: auto;
+
+  font-size: 2rem;
  }
 
- .new-room-button {
-     color: white;
-     background-color: rgba(0, 100, 200, 0.50);
-     border: 2px solid rgba(0, 100, 200, 0.75);
-     padding: 5px 10px;
-     border-radius: 8px;
-     display: inline-block;
-     font-size: 26px;
- }
+.new-room-button {
+  margin: 5px 10px;
+  background-color: rgba(0, 100, 200, 0.50);
+  border: 2px solid rgba(0, 100, 200, 0.75);
+  padding: 5px 10px;
+  border-radius: 8px;
+
+  color: white;
+}
+
+.sign-out-button {
+  margin: 5px 10px;
+  background-color: rgba(0, 100, 200, 0.50);
+  border: 2px solid rgba(0, 100, 200, 0.75);
+  padding: 5px 10px;
+  border-radius: 8px;
+
+  color: white;
+}
 
  .new-room-button:hover {
-     color: white;
-     background-color: rgba(0, 100, 200, 1);
-     border: 2px solid rgba(0, 100, 200, 1);
-     padding: 5px 10px;
-     border-radius: 8px;
-     display: inline-block;
-     font-size: 26px;
-     cursor: pointer;
+  background-color: rgba(0, 100, 200, 1);
+  border: 2px solid rgba(0, 100, 200, 1);
+  cursor: pointer;
+ }
+
+ .sign-out-button:hover {
+  background-color: rgba(0, 100, 200, 1);
+  border: 2px solid rgba(0, 100, 200, 1);
+  cursor: pointer;
  }
 
 .room-names {
-    cursor: pointer;
+  margin: 5px 10px;
+  padding: 5px 10px;
+  color: gray;
+  cursor: pointer;
 }
 
 .room-names:hover {
-    color: rgba(0, 100, 200, 1);
+  color: rgba(0, 100, 200, 1);
 }
 
 .chat {
-    display: inline-block;
-    font-family: 'Bubbler One', sans-serif;
-    position: absolute;
-    top: 150px;
-    left: 300px;
-    height: 500px;
-    /*width: 60%;*/
-    color: rgba(0, 50, 150, 1);
+  background-image: url(../assets/images/unclever-bot_horizontal.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+  position: relative;
+  margin-top: 5rem;
+  left: 5rem;
+  min-height: 50rem;
+  width: 80%;
+  display: inline-block;
+
+  color: gray;
+}
+
+#convo-history {
+  margin-left: 35rem;
+  height: 35rem;
+  width: 50%;
+  max-width: 70rem;
+  overflow-y: auto;
 }
 
 .message-display {
-    font-family: 'Pangolin', cursive;
-    color: rgba(0, 50, 150, 1);
-    font-size: 16px;
+  font-size: 1rem;
+}
+
+#username {
+  color: rgba(0, 50, 150, 1);
+  font-size: 1.5rem;
 }
 
 .message-content {
-    color: gray;
-    font-size: 24px;
+  padding-left: 5rem;
+
+  color: black;
+  font-size: 1.5rem;
 }
 
 .modal-window {
-    font-family: 'Bubbler One', sans-serif;
-    color: rgba(0, 50, 150, 1);
-    background-color: rgba(0, 100, 200, 0.15);
-    text-align: center;
+  background-color: rgba(0, 100, 200, 0.15);
+  text-align: center;
+
+  color: rgba(0, 50, 150, 1);
 }
 
 .modal-header {
-    color: white;
-    background-color: rgba(0, 100, 200, 1);
-    text-align: center;
+  background-color: rgba(0, 100, 200, 1);
+
+  text-align: center;
+  color: white;
 }
 
 .modal-title {
-    font-size: 30px;
+  font-size: 3rem;
 }
 
 .modal-prompt {
-    font-size: 16px;
-    padding: 5px;
-    text-align: left;
+  padding: 5px;
+
+  font-size: 2rem;
+  text-align: left;
 }
 
 .modal-actions {
-    position: relative;
-    bottom: 5px;
-    padding: 15px;
+  position: relative;
+  bottom: 5px;
+  padding: 15px;
+
+  font-size: 1.5rem;
 }
 
 .message-field {
-    position: relative;
-    height: 50%;
+  position: relative;
 }
 
 .message-box {
-    width: 200px;
+  margin-left: 35rem;
+  width: 30%;
+  max-width: 70rem;
 }
