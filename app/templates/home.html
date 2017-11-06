@@ -1,47 +1,41 @@
-<div class = 'nav'>
-  <span class = 'new-room-button'
-        type = 'button'
-        ng-click = 'home.addRoom()'>
-        Create New Bot
-  </span>
-  <span class = 'room-names'
-      ng-repeat = 'room in home.rooms'>
-      <span class = 'room-name'
-          ng-click = 'home.setActiveRoom(room)'>
-          {{ room.name }}
-      </span>
-  </span>
-</div>
+<img src="assets/images/uncleverbots.png"></img>
 
-<div class = 'chat'>
-  <h1> {{ home.activeRoom.name }} </h1>
-  <div id = "convo-history">
-    <div class = 'message-display'
-        ng-repeat = 'message in home.messages'>
-          {{ message.sentAt | date : "short"  }},
-        <span id = "username">
-          {{ message.username }} said:
-        </span>
-        <div class = 'message-content'>
-                {{ message.content }}
-        </div>
-        <br />
+<div class = 'new-room-button'
+      type = 'button'
+      ng-click = 'home.addRoom()'>
+      Create Bot
+</div>
+<div class = 'room-names'
+    ng-repeat = 'room in home.rooms'>
+    <div class = 'room-name'
+        ng-click = 'home.setActiveRoom(room)'>
+        {{ room.name }}
     </div>
-  </div>
-  <br /><br />
-  <div class = 'message-field'
-          ng-show = 'home.activeRoom != null'>
-      <input type = 'text'
-              name = 'input'
-              placeholder = 'Chat with {{ home.activeRoom.name }}!'
-              class = 'message-box'
-              ng-model = 'home.newMessage.content'>
-      <button class = 'send-message'
-              type = 'button'
-              ng-click = 'home.sendMessage(); home.respond()'>
-              Send
-      </button>
-  </div>
 </div>
-
+<div class = 'message-display'
+    ng-repeat = 'message in home.messages'>
+      {{ message.sentAt | date : "short"  }},
+    <span id = "username">
+      {{ message.username }} said:
+    </span>
+    <div class = 'message-content'>
+            {{ message.content }}
+    </div>
+    <br />
 </div>
+<div class = 'message-field'
+        ng-show = 'home.activeRoom != null'>
+    <input type = 'text'
+            name = 'input'
+            placeholder = 'Chat with {{ home.activeRoom.name }}!'
+            class = 'message-box'
+            ng-model = 'home.newMessage.content'>
+    <button class = 'send-message'
+            type = 'button'
+            ng-click = 'home.sendMessage(); home.respond()'>
+            Send
+    </button>
+</div>
+<br />
+<br />
+<br />

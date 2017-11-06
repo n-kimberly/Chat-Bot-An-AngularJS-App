@@ -1,6 +1,11 @@
+img {
+  width: 10%;
+  height: 10%;
+}
+
 body {
-  padding-left: 10rem;
-  padding-right: 10rem;
+  min-height: 70rem;
+  text-align: center;
 }
 
 div, button, span, strong {
@@ -12,90 +17,55 @@ div, button, span, strong {
   background-color: rgba(0, 100, 200, 0.15);
   padding: 1rem;
 
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   text-align: center;
 }
-
-.nav {
-  position: relative;
-  padding-top: 1.5rem;
-  padding-left: 5rem;
-  background-color: rgba(0, 100, 200, 0.05);
-  height: 6rem;
-  width: 100%;
-  overflow-x: auto;
-
-  font-size: 2rem;
- }
 
 .new-room-button {
   margin: 5px 10px;
   background-color: rgba(0, 100, 200, 0.50);
-  border: 2px solid rgba(0, 100, 200, 0.75);
   padding: 5px 10px;
   border-radius: 8px;
 
   color: white;
 }
 
-.sign-out-button {
-  margin: 5px 10px;
-  background-color: rgba(0, 100, 200, 0.50);
-  border: 2px solid rgba(0, 100, 200, 0.75);
-  padding: 5px 10px;
-  border-radius: 8px;
-
-  color: white;
-}
 
  .new-room-button:hover {
   background-color: rgba(0, 100, 200, 1);
-  border: 2px solid rgba(0, 100, 200, 1);
-  cursor: pointer;
- }
-
- .sign-out-button:hover {
-  background-color: rgba(0, 100, 200, 1);
-  border: 2px solid rgba(0, 100, 200, 1);
   cursor: pointer;
  }
 
 .room-names {
   margin: 5px 10px;
+  background-color: rgba(160,160,160,0.5);
   padding: 5px 10px;
-  color: gray;
-  cursor: pointer;
+  border-radius: 8px;
+
+  color: black;
 }
 
 .room-names:hover {
-  color: rgba(0, 100, 200, 1);
+  background-color: rgba(160,160,160,1);
+  cursor: pointer;
 }
 
-.chat {
-  background-image: url(../assets/images/unclever-bot_horizontal.png);
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: contain;
-  position: relative;
-  margin-top: 5rem;
-  left: 5rem;
-  min-height: 50rem;
+.message-field {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  text-align: left;
+}
+
+.message-box {
   width: 80%;
-  display: inline-block;
-
-  color: gray;
-}
-
-#convo-history {
-  margin-left: 35rem;
-  height: 35rem;
-  width: 50%;
-  max-width: 70rem;
-  overflow-y: auto;
 }
 
 .message-display {
   font-size: 1rem;
+  text-align: left;
 }
 
 #username {
@@ -141,14 +111,4 @@ div, button, span, strong {
   padding: 15px;
 
   font-size: 1.5rem;
-}
-
-.message-field {
-  position: relative;
-}
-
-.message-box {
-  margin-left: 35rem;
-  width: 30%;
-  max-width: 70rem;
 }

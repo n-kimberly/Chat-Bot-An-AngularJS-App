@@ -1,0 +1,152 @@
+.container {
+  height: 100%;
+  width: 100%;
+  border-style: solid;
+}
+
+div, button, span, strong {
+  font-family: 'Averia Gruesa Libre', cursive;
+}
+
+.title {
+  color: rgba(0, 50, 150, 1);
+  background-color: rgba(0, 100, 200, 0.15);
+  padding: 1rem;
+
+  font-size: 4rem;
+  text-align: center;
+  border-style: solid;
+}
+
+.chat {
+  height: 50rem;
+  width: 100%;
+
+  color: gray;
+}
+
+.left-sidebar {
+  min-height: 50%;
+  position: relative;
+  height: 100%;
+  width: 40%;
+
+  border-style: solid;
+  border-color: green;
+  display:inline;
+}
+
+.nav {
+  /*background-image: url(../assets/images/unclever-bot.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;*/
+  position: relative;
+  padding-top: 2rem;
+  height: inherit;
+  width: inherit;
+
+  font-size: 2rem;
+  border-style: solid;
+ }
+
+.new-room-button {
+  margin: 5px 10px;
+  background-color: rgba(0, 100, 200, 0.50);
+  border: 2px solid rgba(0, 100, 200, 0.75);
+  padding: 5px 10px;
+  border-radius: 8px;
+
+  color: white;
+}
+
+.new-room-button:hover {
+  background-color: rgba(0, 100, 200, 1);
+  border: 2px solid rgba(0, 100, 200, 1);
+  cursor: pointer;
+}
+
+.room-names {
+  margin: 5px 10px;
+  padding: 5px 10px;
+  color: gray;
+  cursor: pointer;
+}
+
+.room-names:hover {
+  color: rgba(0, 100, 200, 1);
+}
+
+.right-sidebar {
+  position: relative;
+  height: inherit;
+  width: inherit;
+
+  border-style: solid;
+  border-color: red;
+  display:inline;
+}
+
+.chat .sidebar #convo-box {
+  height: 35rem;
+  overflow-y: auto;
+
+  border-style: solid;
+}
+
+.chat .sidebar .message-field {
+  border-style: solid;
+}
+
+.chat .sidebar .message-box {
+  width: 70%;
+}
+
+.message-display {
+  font-size: 1rem;
+}
+
+#username {
+  color: rgba(0, 50, 150, 1);
+  font-size: 1.5rem;
+}
+
+.message-content {
+  padding-left: 5rem;
+
+  color: black;
+  font-size: 1.5rem;
+}
+
+.modal-window {
+  background-color: rgba(0, 100, 200, 0.15);
+  text-align: center;
+
+  color: rgba(0, 50, 150, 1);
+}
+
+.modal-header {
+  background-color: rgba(0, 100, 200, 1);
+
+  text-align: center;
+  color: white;
+}
+
+.modal-title {
+  font-size: 3rem;
+}
+
+.modal-prompt {
+  padding: 5px;
+
+  font-size: 2rem;
+  text-align: left;
+}
+
+.modal-actions {
+  position: relative;
+  bottom: 5px;
+  padding: 15px;
+
+  font-size: 1.5rem;
+}
