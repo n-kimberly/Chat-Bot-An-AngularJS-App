@@ -1,6 +1,6 @@
 # Unclever Bots
 
-### Bloc Chat is anAngularJS Project that leverages data binding between HTML, JS, and Firebase via AngularFire to provide a simple chat room service for users.
+### Unclever Bots is an AngularJS Project that leverages data binding between HTML, JS, and Firebase via AngularFire to provide a simple chat room service for users.
 
 [Sample Deployed at Heroku](https://unclever-bots.herokuapp.com/)
 
